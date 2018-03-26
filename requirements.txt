@@ -1,0 +1,3 @@
+pyodbc==4.0.22
+simplejson==3.13.2
+requests==2.18.4
