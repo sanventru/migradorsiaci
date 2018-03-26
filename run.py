@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'siaci 2018 rep0rt3r14.!'
 # twisted = Twisted(app)
 
-host = '127.0.0.1'
+host = '192.168.0.153'
 eng = 'siaci_db'
 pwd = '197304'
 uid = 'dba'
@@ -14,7 +14,7 @@ uid = 'dba'
 
 @app.route('/')
 def home():
-    return('Hola')
+    return('Migrador Siaci')
 
 
 @app.route('/insertget/<registros>', methods=['GET'])
@@ -34,10 +34,10 @@ def datospost():
         rows = request.json
         for r in rows:
             param = list(r.values())
-            param = param[1:]
-            param = str(tuple(param))
+            #param = param[1:]
+            param = str(tuple(param)).replace('None','null')
             columnas = list(r.keys())
-            columnas = columnas[1:]
+            #columnas = columnas[1:]
             columnas = str(tuple(columnas))
             columnas = columnas.replace("'", '')
             sql = "insert into ventas_solintece " + columnas + " values" + param
