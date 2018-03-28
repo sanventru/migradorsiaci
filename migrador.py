@@ -28,8 +28,8 @@ hasta = ''
 tipo = ''
 
 parametros = sys.argv # Fecha_inicio Fecha_fin Tipo
-desde = parametros[1]
-hasta = parametros[2]
+desde = parametros[1].replace('_', ' ')
+hasta = parametros[2].replace('_', ' ')
 tipo = parametros[3]
 estacion = parametros[4]
 
