@@ -25,10 +25,14 @@ hasta = ''
 tipo = ''
 agencia = ''
 parametros = sys.argv
-desde = parametros[1].replace('_', ' ')
-hasta = parametros[2].replace('_', ' ')
-tipo = parametros[3]
-agencia = parametros[4]
+try:
+    desde = parametros[1].replace('_', ' ')
+    hasta = parametros[2].replace('_', ' ')
+    tipo = parametros[3]
+    agencia = parametros[4]
+except OSError:
+    print("Revisar los parmetros")
+    raise
 
 def myconverter(o):
     if isinstance(o, datetime.datetime):
