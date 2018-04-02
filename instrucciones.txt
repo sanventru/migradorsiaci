@@ -1,0 +1,5 @@
+1.- Ejecutar run.exe en el servidor destino tomando en cuenta que el puerto 8000 debe estar libre
+2.- Consumir migrador.exe con los parámetros fechainicio_hora fechafinal_hora tipo agencia
+    ejemplo:
+    migrador.exe 2018-01-01_00:00:00 2018-02-01_00:00:00 4 agencia
+3.- AL finalizar el proceso imprimirá SI si el proceso fue exitoso, caso contrario NO
