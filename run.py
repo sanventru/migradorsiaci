@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'siaci 2018 rep0rt3r14.!'
 # twisted = Twisted(app)
 
-host = '192.168.0.153'
+host = 'localhost'
 eng = 'siaci_db'
 pwd = '197304'
 uid = 'dba'
@@ -40,7 +40,7 @@ def datospost():
             #columnas = columnas[1:]
             columnas = str(tuple(columnas))
             columnas = columnas.replace("'", '')
-            sql = "insert into ventas_solintece " + columnas + " values" + param
+            sql = "insert into ventas_solintece_tmp " + columnas + " values" + param
             curs.execute(sql)
         curs.close()
         conn.commit()
