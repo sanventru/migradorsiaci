@@ -4,7 +4,7 @@ import sqlanydb
 
 app = Flask(__name__)
 app.secret_key = 'siaci 2018 rep0rt3r14.!'
-# twisted = Twisted(app)
+twisted = Twisted(app)
 
 host = 'localhost'
 eng = 'siaci_db'
@@ -59,4 +59,5 @@ def datospost():
 if __name__ == "__main__":
     app.config['SESSION_TYPE'] = 'memcached'
     app.run(host='0.0.0.0', port=8000, debug=True)
+    # app.run(host='0.0.0.0', port=8000, debug=True)
     # app.run(debug=True, host='0.0.0.0', port=5000)

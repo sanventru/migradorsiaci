@@ -1,0 +1,12 @@
+__pycache__/
+build/
+dist/
+hacerservicio.err.log
+hacerservicio.out.log
+hacerservicio.wrapper.log
+migrador.spec
+prueba.py
+run.py
+server.exe
+server.spec
+test.txt
